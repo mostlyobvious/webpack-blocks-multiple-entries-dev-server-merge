@@ -25,9 +25,16 @@ const config = createConfig([
   ]),
 ]);
 
-console.log({
-  entry: config.entry
-});
+merge = require('webpack-merge');
+util  = require('util');
+
+console.log(util.inspect({
+  receivedEntry: { entry: config.entry },
+  expectedEntry: merge.smart(
+    { entry: { 'a': ['./a.js'], 'b': ['./b.js'] } },
+    { entry: { 'a': ['webpack/hot/only-dev-server'], 'b': ['webpack/hot/only-dev-server'] } }
+  )
+}, false, null));
 
 module.exports = config;
 
