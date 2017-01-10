@@ -1,0 +1,19 @@
+{
+  "private": "true",
+  "engines": {
+    "node": "7.4.0"
+  },
+  "dependencies": {
+    "@webpack-blocks/babel6": "^0.3.0",
+    "@webpack-blocks/dev-server": "^0.3.0",
+    "@webpack-blocks/extract-text": "^0.3.0",
+    "@webpack-blocks/postcss": "^0.3.0",
+    "@webpack-blocks/sass": "^0.3.0",
+    "@webpack-blocks/webpack": "^0.3.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js"
+  }
+}
